@@ -11,7 +11,7 @@ import java.util.Objects;
 @AllArgsConstructor
 @ToString
 @Entity
-@Table(name = "teams")
+@Table(name = "icc_teams")
 public class Team {
 
     @Id
