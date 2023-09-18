@@ -16,22 +16,21 @@ public class Team {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int teamId;
-    private String teamName;
-    private int ranking;
+    private int id;
+    private String name;
+    private String code;
     private String country;
-    private String countryCode;
     private boolean active;
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Team teams = (Team) o;
-        return teamId == teams.teamId && Objects.equals(teamName, teams.teamName);
+        return id == teams.id && Objects.equals(name, teams.name);
     }
     @Override
     public int hashCode() {
-        return Objects.hash(teamId, teamName);
+        return Objects.hash(id, name);
     }
 }
 

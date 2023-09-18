@@ -12,10 +12,10 @@ import java.sql.Date;
 @ToString
 @Entity
 @Table(name = "icc_rankings")
-public class TeamRanking {
+public class Ranking {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int rankId;
+    private int id;
     private int teamId;
     private int iccRank;
     private int points;
