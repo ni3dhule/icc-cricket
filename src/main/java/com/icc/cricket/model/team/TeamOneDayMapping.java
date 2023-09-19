@@ -1,4 +1,4 @@
-package com.icc.cricket.model;
+package com.icc.cricket.model.team;
 
 import lombok.*;
 
@@ -10,8 +10,8 @@ import javax.persistence.*;
 @AllArgsConstructor
 @ToString
 @Entity
-@Table(name = "icc_team_t20_mapping")
-public class TeamT20Mapping {
+@Table(name = "icc_team_one_day_mapping")
+public class TeamOneDayMapping {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;

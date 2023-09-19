@@ -1,4 +1,4 @@
-package com.icc.cricket.model;
+package com.icc.cricket.model.player;
 
 import lombok.*;
 

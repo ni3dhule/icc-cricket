@@ -1,4 +1,4 @@
-package com.icc.cricket.model;
+package com.icc.cricket.model.team;
 
 import lombok.*;
 
@@ -11,15 +11,21 @@ import java.util.Objects;
 @AllArgsConstructor
 @ToString
 @Entity
-@Table(name = "icc_teams")
+@Table(name = "icc_teams", uniqueConstraints = { @UniqueConstraint(name = "UK_icc_teams_name_code", columnNames =
+        {"name", "code"}) })
 public class Team {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private int id;
+    @Column(name = "name")
     private String name;
+    @Column(name = "code")
     private String code;
+    @Column(name = "country")
     private String country;
+    @Column(name = "is_active")
     private boolean active;
     @Override
     public boolean equals(Object o) {
@@ -33,5 +39,3 @@ public class Team {
         return Objects.hash(id, name);
     }
 }
-
-

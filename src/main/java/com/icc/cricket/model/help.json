@@ -1,0 +1,62 @@
+[
+  {
+    "_comment": "Player",
+    "id":1,
+    "teamId":101,
+    "firstName":"John",
+    "middleName": "M",
+    "lastName":"Doe",
+    "gender":"Male",
+    "role": "Batter",
+    "dob":"2023-09-19T11:23:45.678+00:00",
+    "retired":false,
+    "careerStartDate":"2023-09-19T11:23:45.678+00:00",
+    "retirementDate":null
+  },
+  {
+    "_comment": "PlayerOneDayMapping, PlayerT20Mapping, PlayerTestMapping",
+    "id": 123,
+    "playerId": 456,
+    "totalMatchesPlayed": 100,
+    "totalFifties": 20,
+    "totalCenturies": 5,
+    "totalRuns": 5000,
+    "average": 50.0,
+    "bestScore": 150,
+    "bestScoreAgainstTeamId": 789,
+    "totalManOfTheMatch": 15,
+    "bestBowling": "3/25",
+    "totalWicketsTaken": 50,
+    "economy": 4.5,
+    "totalFiveWickets": 2,
+    "retired": false,
+    "careerStartDate": "2020-01-01",
+    "retirementDate": "2023-09-19"
+  },
+  {
+    "_comment": "Ranking",
+    "id": 1,
+    "teamId": 101,
+    "iccRank": 2,
+    "rating": 900,
+    "points": 50,
+    "year": 2023,
+    "creationDate": "2023-09-19T12:00:00Z",
+    "updatedDate": "2023-09-19T14:30:00Z"
+  },
+  {
+    "_comment": "TeamOneDayMapping, TeamT20Mapping, TeamTestMapping",
+    "id": 1,
+    "teamId": 101,
+    "totalMatchesPlayed": 50,
+    "totalMatchesWon": 30,
+    "totalMatchesLost": 15,
+    "totalMatchesDrew": 5,
+    "highestScore": 300,
+    "lowestScore": 100,
+    "highestScoreAgainstTeamId": 201,
+    "lowestScoreAgainstTeamId": 301,
+    "highestScoreChased": 250,
+    "highestScoreChasedAgainstTeamId": 202
+  }
+]

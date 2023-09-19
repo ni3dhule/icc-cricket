@@ -18,6 +18,7 @@ public class Ranking {
     private int id;
     private int teamId;
     private int iccRank;
+    private int rating;
     private int points;
     private int year;
     private Date creationDate;

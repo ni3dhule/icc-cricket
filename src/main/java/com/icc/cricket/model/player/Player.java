@@ -1,9 +1,10 @@
-package com.icc.cricket.model;
+package com.icc.cricket.model.player;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -19,9 +20,15 @@ public class Player {
     private int teamId;
     private String firstName;
     private String lastName;
+    private String middleName;
+    private String nickName;
     private String gender;
+    private String role;
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
     private Date dob;
     private boolean retired;
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
     private Date careerStartDate;
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
     private Date retirementDate;
 }

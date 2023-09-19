@@ -1,4 +1,4 @@
-package com.icc.cricket.model;
+package com.icc.cricket.model.player;
 
 import lombok.*;
 
@@ -11,8 +11,8 @@ import java.sql.Date;
 @AllArgsConstructor
 @ToString
 @Entity
-@Table(name = "icc_player_one_day_mapping")
-public class PlayerOneDayMapping {
+@Table(name = "icc_player_test_mapping")
+public class PlayerTestMapping {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
