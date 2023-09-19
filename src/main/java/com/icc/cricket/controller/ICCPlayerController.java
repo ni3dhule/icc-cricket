@@ -1,9 +1,8 @@
 package com.icc.cricket.controller;
 
 import com.icc.cricket.model.player.Player;
+import com.icc.cricket.resources.PlayerResource;
 import com.icc.cricket.services.ICCPlayerService;
-import com.icc.cricket.services.ICCTeamService;
-import org.hibernate.annotations.DynamicUpdate;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -23,14 +22,14 @@ public class ICCPlayerController {
     }
 
     @PostMapping("player")
-    public Player savePlayer(@RequestBody Player player){
-        return iccPlayerService.savePlayer(player);
+    public Player savePlayer(@RequestBody PlayerResource resource){
+        return iccPlayerService.savePlayer(resource.toPlayer());
     }
 
     @PutMapping("player/{playerId}")
-    public Player updatePlayer(@PathVariable("playerId") int playerId, @RequestBody Player player){
-        player.setId(playerId);
-        return iccPlayerService.updatePlayer(player);
+    public Player updatePlayer(@PathVariable("playerId") int playerId, @RequestBody PlayerResource resource){
+        resource.setId(playerId);
+        return iccPlayerService.updatePlayer(resource.toPlayer());
     }
 
 }

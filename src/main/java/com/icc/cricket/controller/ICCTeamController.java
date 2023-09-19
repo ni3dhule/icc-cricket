@@ -1,6 +1,7 @@
 package com.icc.cricket.controller;
 
 import com.icc.cricket.model.team.Team;
+import com.icc.cricket.resources.team.TeamResource;
 import com.icc.cricket.services.ICCTeamService;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,20 +25,20 @@ public class ICCTeamController {
     }
 
     @PostMapping("team")
-    public Team saveTeams(@RequestBody Team team) {
-        return iccTeamService.saveTeam(team);
+    public Team saveTeams(@RequestBody TeamResource resource) {
+        return iccTeamService.saveTeam(resource.toTeam());
     }
 
     @PutMapping("team/{teamId}")
-    public Team updateTeams(@PathVariable("teamId") int teamId, @RequestBody Team team) {
-        team.setId(teamId);
-        return iccTeamService.updateTeam(team);
+    public Team updateTeams(@PathVariable("teamId") int teamId, @RequestBody TeamResource resource) {
+        resource.setId(teamId);
+        return iccTeamService.updateTeam(resource.toTeam());
     }
 
     @PatchMapping("team/{teamId}")
-    public Team updateTeamsPatch(@PathVariable("teamId") int teamId, @RequestBody Team team) {
-        team.setId(teamId);
-        return iccTeamService.updateTeam(team);
+    public Team updateTeamsPatch(@PathVariable("teamId") int teamId, @RequestBody TeamResource resource) {
+        resource.setId(teamId);
+        return iccTeamService.updateTeam(resource.toTeam());
     }
 
     @PostMapping("teams")

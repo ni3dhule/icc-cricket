@@ -2,7 +2,6 @@ package com.icc.cricket.services;
 
 import com.icc.cricket.model.player.Player;
 import com.icc.cricket.repositories.PlayerRepository;
-import org.hibernate.annotations.DynamicUpdate;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
