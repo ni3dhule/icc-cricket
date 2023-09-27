@@ -17,7 +17,7 @@ public class ICCWorldCupU19 {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int worldCupId;
     private int year;
-    private String hostingCountry;
+    private String host;
     private int totalTeams;
     private int totalMatches;
 }

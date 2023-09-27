@@ -17,7 +17,7 @@ public class ICCChampionsTrophy {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int championsTrophyId;
     private int year;
-    private String hostingCountry;
+    private String host;
     private int totalTeams;
     private int totalMatches;
 }
