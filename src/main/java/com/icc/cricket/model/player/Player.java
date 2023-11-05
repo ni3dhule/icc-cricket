@@ -28,7 +28,7 @@ public class Player {
     private Date dob;
     private boolean retired;
     @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
-    private Date careerStartDate;
+    private Date debutOn;
     @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
-    private Date retirementDate;
+    private Date retiredOn;
 }
