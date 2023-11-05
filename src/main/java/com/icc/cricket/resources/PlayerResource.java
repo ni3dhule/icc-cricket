@@ -24,9 +24,9 @@ public class PlayerResource {
     private Date dob;
     private boolean retired;
     @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
-    private Date careerStartDate;
+    private Date debutOn;
     @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
-    private Date retirementDate;
+    private Date retiredOn;
 
     public Player toPlayer() {
         Player player = new Player();
@@ -40,8 +40,8 @@ public class PlayerResource {
         player.setRole(this.role);
         player.setNickName(this.nickName);
         player.setRetired(this.retired);
-        player.setCareerStartDate(this.careerStartDate);
-        player.setRetirementDate(this.retirementDate);
+        player.setDebutOn(this.debutOn);
+        player.setRetiredOn(this.retiredOn);
         return player;
     }
 }
